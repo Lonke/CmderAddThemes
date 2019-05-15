@@ -1,10 +1,9 @@
 # coding: utf-8
 import argparse
 import os
-from xml.etree import ElementTree as ET
-from shutil import copy
 from pathlib import Path
-from pprint import pprint
+from shutil import copy
+from xml.etree import ElementTree as ET
 
 parser = argparse.ArgumentParser(description='Themes')
 parser.add_argument("themeDir",
@@ -32,8 +31,8 @@ args = parser.parse_args()
 themeDir = args.themeDir.resolve()
 configDir = args.cmderCfgDir.resolve()
 
-print(themeDir)
-print(configDir)
+print(f"Theme Directory: {themeDir}")
+print(f"Config Directory: {configDir}")
 
 verbose = args.verbose
 shouldBackup = args.skip_backup
@@ -45,10 +44,6 @@ absCurCfg = os.path.join(configDir, curCfgName)
 if not os.path.isfile( absCurCfg ):
 	print(f"Unable to locate {curCfgName} in {configDir}, exiting...")
 	exit()
-
-if verbose:
-	print(f"\nThemes Directory: {themeDir}")
-	print(f"Cmder Config Directory: {configDir}\n")
 
 if shouldBackup:
 	i = 1
@@ -130,4 +125,4 @@ with open(absNewCfg, 'wb') as newCfgFile:
 	newCfgFile.write(newConfig)
 
 
-print(f"All done! {themesAdded} theme(s) added")
+print(f"\nAll done! {themesAdded} theme(s) added")
