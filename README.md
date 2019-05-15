@@ -1,5 +1,5 @@
 
-![AddThemes.py](https://user-images.githubusercontent.com/8409189/57814420-e3e6aa00-7773-11e9-8731-17035c9d1bce.png)
+![AddThemes.py](https://user-images.githubusercontent.com/8409189/57816567-14324680-777c-11e9-9c72-fa872a171803.png)
 
 
 # CmderAddThemes
